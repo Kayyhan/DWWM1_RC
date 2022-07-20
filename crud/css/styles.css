@@ -1,0 +1,161 @@
+body{
+  margin: 0;
+  padding: 0;
+  background: #ffeccc;
+}
+
+header{
+  width: 100%;
+  height: 100px;
+  background: #fdad17;
+  position: absolute;
+  top: 0;
+}
+
+nav{
+  width: 100%;
+  height: 100%;
+  position: relative;
+}
+
+.navbar{
+  width: 40%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 20px;
+}
+
+.navbar ul{
+  height: 100%;
+  margin:0;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.navbar li{
+  list-style: none;
+}
+
+.navbar li a{
+  font-size: 26px;
+  color: #ffeccc;
+  text-decoration: none;
+  font-weight: 700;
+}
+
+.navbar li a:hover{
+  color: #005248;
+}
+
+.home{
+  position: absolute;
+  width: 90%;
+  height: auto;
+  margin: 0 auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.home h1{
+  text-align: center;
+}
+
+.container-form-connexion{
+  position: absolute;
+  width: 100%;
+  height: auto;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.container-form-connexion h1{
+  text-align: center;
+}
+
+.form-connexion{
+  width: 70%;
+  height: auto;
+  margin: 0 auto;
+  padding: 20px 10px 20px 10px;
+  background:#a48255;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Style all input fields */
+input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+    margin-top: 6px;
+    margin-bottom: 16px;
+  }
+  
+  /* Style the submit button */
+  input[type=submit] {
+    background-color: #04AA6D;
+    color: white;
+  }
+  
+  /* Style the container for inputs */
+  .container {
+    background-color: #f1f1f1;
+    padding: 20px;
+  }
+  
+  /* The message box is shown when the user clicks on the password field */
+  #message {
+    display:none;
+    background: #f1f1f1;
+    color: #000;
+    position: relative;
+    padding: 20px;
+    margin-top: 10px;
+  }
+  
+  #message p {
+    padding: 10px 35px;
+    font-size: 18px;
+  }
+  
+  /* Add a green text color and a checkmark when the requirements are right */
+  .valid {
+    color: green;
+  }
+  
+  .valid:before {
+    position: relative;
+    left: -35px;
+    content: "✔";
+  }
+  
+  /* Add a red text color and an "x" when the requirements are wrong */
+  .invalid {
+    color: red;
+  }
+  
+  .invalid:before {
+    position: relative;
+    left: -35px;
+    content: "✖";
+  }
