@@ -1,0 +1,241 @@
+body{
+    margin:0;
+    padding:0;
+    background-color: #F8F8FF;
+    height: 100vh;
+}
+.main{
+    width:100%;
+    height:100%;
+    position:relative;
+}
+
+header{
+    width: 100%;
+    height: 100px;
+    background-color:#252426;
+    /* position: absolute;
+    top: 0; */
+}
+
+nav{
+    width: 100%;
+    height: 100px;
+    position:relative;
+}
+
+.logo{
+    width: 250px;
+    height:100px;
+    position: absolute;
+    left: 3%;
+    top: 0;
+}
+
+.logo img{
+    max-width: 100%;
+    height:auto;
+}
+
+.navbar{
+    width: 60%;
+    height: 100%;
+    position: absolute;
+    top: 0;
+    right: 0;
+}
+.navbar ul{
+    width: 100%;
+    height: 100%;
+    margin: 0;
+    position: absolute;
+    top: 0;
+    right: 0;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.navbar li{
+    list-style: none;
+}
+
+.navbar li a {
+    color:#F8F8FF;
+    font-size:22px;
+    text-decoration: none;
+}
+
+.navbar li a:hover {
+    color:#BFA58E;
+    text-decoration: none;
+    transition: all ease 0.3s;
+}
+
+footer{
+    width: 100%;
+    height:100px;
+    position: absolute;
+    bottom: 0;
+    background-color:#BFA58E;
+}
+
+.form-container{
+    position: absolute;
+    width:60%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    margin:0 auto;
+}
+
+.contact-form{
+    width:80%;
+    height: auto;
+    background:#BFA58E;
+    margin:auto;
+    border-radius: 10px;
+    padding: 20px 0px;
+}
+
+.contact-form label{
+    width: 100%;
+    color:#F8F8FF;
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+.contact-form input{
+    width: 100%;
+    height: 40px;
+    border-radius: 10px;
+    border: none;
+}
+
+.contact-form textarea{
+    width: 100%;
+    height: 200px;
+    border:none;
+    border-radius: 10px;
+}
+
+.form-name{
+    width:80%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px auto;
+}
+
+.form-mail{
+    width:80%;
+    height:80px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px auto;
+}
+
+.form-message{
+    width:80%;
+    height:150px;
+    display: flex;
+    flex-direction: column;
+    margin: 20px auto 0px auto;
+}
+
+.form-submit{
+    width:80%;
+    height:40px;
+    margin: 40px auto 20px auto;
+}
+
+.form-submit input{
+    width:100px;
+    text-transform: uppercase;
+    display:block;
+    float: right;
+    cursor: pointer;
+    background:#F8F8FF;
+    border: 2px solid #F8F8FF;
+    color:#BFA58E;
+}
+
+.form-submit input:hover{
+    background:#BFA58E;
+    color:#F8F8FF;
+}
+
+.presentation-container{
+    position: absolute;
+    width:100%;
+    height: auto;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.presentation-text{
+    width: 50%;
+    height:auto;
+}
+
+.text{
+    width: 70%;
+    height: auto;
+    margin: 0 auto;
+    background-color: #C6C5D9;
+    padding: 20px;
+    margin-bottom: 40px;
+}
+.text p{
+    padding-left: 20px;
+}
+
+.presentation-picture{
+    width: 50%;
+    height:auto;
+}
+
+.picture{
+    width: 50%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.picture img{
+    max-width: 100%;
+    height: auto;
+    border-radius: 50%;
+}
+
+.parcours-container{
+    width:100%;
+    height: auto;
+    display: flex;
+    flex-direction: row;
+}
+.parcours-text{
+    width: 50%;
+    height:auto;
+}
+
+.parcours-picture{
+    width: 50%;
+    height:auto;
+}
+
+.parcours{
+    width: 80%;
+    height: auto;
+    margin: 0 auto;
+}
+
+.parcours img{
+    max-width: 100%;
+    height: auto;
+}
