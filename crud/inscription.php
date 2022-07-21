@@ -6,7 +6,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/styles.css" type="text/css" />
-    <title>Login</title>
+    <title>Inscription</title>
 </head>
 
 <body>
@@ -15,54 +15,68 @@
             <div class="navbar">
                 <ul>
                     <li>
-                        <a href="/crud">Accueil</a>
+                        <a href="/DWWM1_RC/crud/">Accueil</a>
                     </li>
                     <li>
-                        <a href="/crud/connexion.php">Connexion</a>
+                        <a href="/DWWM1_RC/crud/connexion.php">Connexion</a>
                     </li>
                     <li>
-                        <a href="/crud/inscription.php">Inscription</a>
+                        <a href="/DWWM1_RC/crud/inscription.php">Inscription</a>
                     </li>
                 </ul>
             </div>
         </nav>
     </header>
+    <div class="container-inscription">
+        <h1>Inscription :</h1>
+        <div class="container-form-inscription">
+            <form action="" class="form-inscription">
+                <div class="inscription-input">
+                    <input type="text" id="nom" name="nom" placeholder="Nom" required />
+                </div>
+                <div class="inscription-input">
+                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" required />
+                </div>
+                <div class="inscription-input">
+                    <input type="mail" id="mail" name="mail" placeholder="E-mail" required />
+                </div>
+                <div class="inscription-input">
+                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" required />
+                </div>
+                <div class="inscription-input">
+                    <input type="password" id="password-confirm" name="password-confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="confirm()" placeholder="Confirmaton de mot de passe" required />
+                </div>
+                <div class="inscription-button">
+                    <button>Inscription</button>
+                </div>
+            </form>
+        </div>
 
-    <div class="container">
-        <form action="/action_page.php">
-            <label for="usrname">Username</label>
-            <input type="text" id="usrname" name="usrname" required>
-
-            <label for="psw">Password</label>
-            <input type="password" id="psw" name="psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" required>
-
-            <input type="submit" value="Submit">
-        </form>
+        <div id="container-condition">
+            <h3>Le mot de passe doit contenir les éléments suivants :</h3>
+            <p id="lettre" class="invalid">Une lettre <b>minuscule</b></p>
+            <p id="majuscule" class="invalid">Une lettre <b>majuscule</b></p>
+            <p id="nombre" class="invalid">Un <b>numéro</b></p>
+            <p id="caratere" class="invalid"><b>Un caractère</b> spécial</p>
+            <p id="taille" class="invalid"><b>8 caractères</b> minimum</p>
+        </div>
     </div>
-
-    <div id="message">
-        <h3>Password must contain the following:</h3>
-        <p id="letter" class="invalid">A <b>lowercase</b> letter</p>
-        <p id="capital" class="invalid">A <b>capital (uppercase)</b> letter</p>
-        <p id="number" class="invalid">A <b>number</b></p>
-        <p id="length" class="invalid">Minimum <b>8 characters</b></p>
-    </div>
-
     <script>
-        var myInput = document.getElementById("psw");
-        var letter = document.getElementById("letter");
-        var capital = document.getElementById("capital");
-        var number = document.getElementById("number");
-        var length = document.getElementById("length");
+        var myInput = document.getElementById("password");
+        var letter = document.getElementById("lettre");
+        var capital = document.getElementById("majuscule");
+        var number = document.getElementById("nombre");
+        var length = document.getElementById("taille");
+        var caractere = document.getElementById("caratere");
 
         // When the user clicks on the password field, show the message box
         myInput.onfocus = function() {
-            document.getElementById("message").style.display = "block";
+            document.getElementById("container-condition").style.display = "block";
         }
 
         // When the user clicks outside of the password field, hide the message box
         myInput.onblur = function() {
-            document.getElementById("message").style.display = "none";
+            document.getElementById("container-condition").style.display = "none";
         }
 
         // When the user starts to type something inside the password field
@@ -104,6 +118,29 @@
             } else {
                 length.classList.remove("valid");
                 length.classList.add("invalid");
+            }
+
+            var caractereSpecial = /^[!@#$%^&*/]$/g;
+            if (myInput.value.match(caractereSpecial)) {
+                caractere.classList.remove("invalid");
+                caractere.classList.add("valid");
+            } else {
+                caractere.classList.remove("valid");
+                caractere.classList.add("invalid");
+            }
+
+        }
+
+        function confirm() {
+            var mdp = document.getElementById("password").value;
+            var mdpConfirm = document.getElementById("password-confirm").value;
+
+            if (mdp != mdpConfirm) {
+                console.log("Les mots de passe ne corresponde pas");
+                return false;
+            } else {
+                console.log("Les mots de passe corresponde");
+                return false;
             }
         }
     </script>
