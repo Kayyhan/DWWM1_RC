@@ -28,16 +28,49 @@
         </nav>
     </header>
     <dvi class="container-form-connexion">
+        <?php
+        if (isset($_GET['login_err'])) {
+            $err = htmlspecialchars($_GET['login_err']);
+
+            switch ($err) {
+
+                case 'password':
+        ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, mot de passe incorrect</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'email':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, email incorrect</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'already':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, compte non existant</p>
+                    </div>
+        <?php
+                    break;
+            }
+        }
+        ?>
+
         <h1>Connexion :</h1>
-        <form method="GET" action="" id="form-connexion" class="form-connexion">
+        <form method="post" action="connexion_traitement.php" id="form-connexion" class="form-connexion">
             <div class="connexion-pseudo">
-                <input type="text" class="pseudo" id="pseudo" placeholder="Pseudo" required />
+                <input type="email" class="email" id="email" placeholder="Email" required />
             </div>
             <div class="connexion-mdp">
-                <input type="text" class="mdp" id="pseudo" placeholder="Mot de passe" required />
+                <input type="password" class="password_connexion" id="password_connexion" placeholder="Mot de passe" required />
             </div>
             <div class="button-connexion">
-                <button>Connexion</button>
+                <button type="submit" id="submit_connexion">Connexion</button>
             </div>
             <div class="information">
                 <a href="#" class="mdp-oublie">Mot de passe oublié ?</a>

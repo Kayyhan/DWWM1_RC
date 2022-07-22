@@ -28,14 +28,69 @@
         </nav>
     </header>
     <div class="container-inscription">
+        <?php
+        if (isset($_GET['reg_err'])) {
+            $err = htmlspecialchars($_GET['reg_err']);
+
+            switch ($err) {
+
+                case 'success':
+        ?>
+                    <div class="alert">
+                        <p><b>Succès</b>, inscription réussie !</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'email':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, email non valide</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'email_length':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, email trop long</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'pseudo_length':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, pseudo trop long</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'password':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, mot de passe différent</p>
+                    </div>
+                <?php
+                    break;
+
+                case 'already':
+                ?>
+                    <div class="alert">
+                        <p><b>Erreur</b>, compte déjà existant</p>
+                    </div>
+        <?php
+                    break;
+            }
+        }
+        ?>
+
+
         <h1>Inscription :</h1>
         <div class="container-form-inscription">
-            <form action="" class="form-inscription">
+            <form action="inscription_traitement.php" method="post" class="form-inscription">
                 <div class="inscription-input">
-                    <input type="text" id="nom" name="nom" placeholder="Nom" required />
-                </div>
-                <div class="inscription-input">
-                    <input type="text" id="prenom" name="prenom" placeholder="Prénom" required />
+                    <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required />
                 </div>
                 <div class="inscription-input">
                     <input type="mail" id="mail" name="mail" placeholder="E-mail" required />
@@ -44,10 +99,10 @@
                     <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" required />
                 </div>
                 <div class="inscription-input">
-                    <input type="password" id="password-confirm" name="password-confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="confirm()" placeholder="Confirmaton de mot de passe" required />
+                    <input type="password" id="password_confirm" name="password_confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="confirm()" placeholder="Confirmaton de mot de passe" required />
                 </div>
                 <div class="inscription-button">
-                    <button>Inscription</button>
+                    <button type="submit" id="btn_inscription">Inscription</button>
                 </div>
             </form>
         </div>
@@ -131,18 +186,18 @@
 
         }
 
-        function confirm() {
-            var mdp = document.getElementById("password").value;
-            var mdpConfirm = document.getElementById("password-confirm").value;
+        // function confirm() {
+        //     var mdp = document.getElementById("password").value;
+        //     var mdpConfirm = document.getElementById("password_confirm").value;
 
-            if (mdp != mdpConfirm) {
-                console.log("Les mots de passe ne corresponde pas");
-                return false;
-            } else {
-                console.log("Les mots de passe corresponde");
-                return false;
-            }
-        }
+        //     if (mdp != mdpConfirm) {
+        //         console.log("Les mots de passe ne corresponde pas");
+        //         return false;
+        //     } else {
+        //         console.log("Les mots de passe corresponde");
+        //         return false;
+        //     }
+        // }
     </script>
 </body>
 
