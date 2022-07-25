@@ -93,13 +93,13 @@
                     <input type="text" id="pseudo" name="pseudo" placeholder="Pseudo" required />
                 </div>
                 <div class="inscription-input">
-                    <input type="mail" id="mail" name="mail" placeholder="E-mail" required />
+                    <input type="email" id="email" name="email" placeholder="E-mail" required />
                 </div>
                 <div class="inscription-input">
-                    <input type="password" id="password" name="password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Mot de passe" required />
+                    <input type="password" id="password" name="password" placeholder="Mot de passe" required />
                 </div>
                 <div class="inscription-input">
-                    <input type="password" id="password_confirm" name="password_confirm" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" onchange="confirm()" placeholder="Confirmaton de mot de passe" required />
+                    <input type="password" id="password_confirm" name="password_confirm" onchange="confirm()" placeholder="Confirmaton de mot de passe" required />
                 </div>
                 <div class="inscription-button">
                     <button type="submit" id="btn_inscription">Inscription</button>

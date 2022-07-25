@@ -1,5 +1,13 @@
 <?php
-require_once 'connexion_bd.php';
+// require 'connexion_bd.php';
+$conn = new PDO('mysql:host=localhost;dbname=crud', 'root', '');
+
+if (!$conn) {
+    die('Erreur de connexion');
+}
+
+var_dump($_POST);
+
 
 if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_confirm'])) {
 
@@ -13,21 +21,20 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
     $conn = $check->fetch();
     $row = $check->rowCount();
 
+
     if ($row == 0) {
         if (strlen($pseudo) <= 100) {
             if (strlen($email) <= 100) {
+
                 if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+
                     if ($password == $password_confirm) {
 
                         $password_crypt = password_hash($password, PASSWORD_BCRYPT);
                         $ip = $_SERVER['REMOTE_ADDR'];
-                        $insert = $conn->prepare('INSERT INTO utilisateurs(pseudo, email, password, ip) VALUES (:pseudo, :email, :password, :ip)');
-                        $insert->execute(array(
-                            'pseudo' => $pseudo,
-                            'email' => $email,
-                            'password' => $password,
-                            'ip' => $ip,
-                        ));
+                        var_dump($ip);
+                        $statement = $conn->prepare("INSERT INTO utilisateurs (pseudo, email, password, ip) VALUES ('$pseudo', '$email', '$password', '$ip')");
+                        $statement->execute();
                         header('Location:inscription.php?reg_err=success');
                     } else header('Location:inscription.php?reg_err=password');
                 } else header('Location:inscription.php?reg_err=email');
