@@ -116,7 +116,7 @@
             <p id="taille" class="invalid"><b>8 caractères</b> minimum</p>
         </div>
     </div>
-    <script>
+    <!-- <script>
         var myInput = document.getElementById("password");
         var letter = document.getElementById("lettre");
         var capital = document.getElementById("majuscule");
@@ -198,7 +198,7 @@
         //         return false;
         //     }
         // }
-    </script>
+    </script> -->
 </body>
 
 </html>
