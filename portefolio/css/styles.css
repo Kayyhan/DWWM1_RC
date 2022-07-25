@@ -67,3 +67,16 @@ progress{
 .uk-slideshow a{
     color:black
 }
+
+.parallaxe-1{
+    height:400px;
+    background-image: url('../img/parallaxe-1.jpg');
+    background-position: center center;
+    background-attachment:fixed ;
+}
+.parallaxe-2{
+    height:400px;
+    background-image: url('../img/parallaxe-2.jpg');
+    background-position: center center;
+    background-attachment:fixed ;
+}
