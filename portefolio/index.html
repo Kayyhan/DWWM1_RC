@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/css/uikit.min.css">
+    <link rel="stylesheet" href="./css/styles.css" type="text/css">
+    <title>Cuvillier Rémy | Développeur web</title>
+</head>
+    <body>
+        <header class="uk-width-1-1 uk-flex">
+            <div class="uk-width-2-3@s">
+                <img src="./img/logo.png" alt="Logo">
+            </div>
+            <div class="uk-navbar-container uk-width-1-3@s" uk-navbar>
+                <div class="uk-navbar-center">
+                        <ul class="uk-navbar-nav">
+                        <li class="uk-active"><a href="#presentation">Presentation</a></li>
+                        <li class="uk-active"><a href="#parcours">Parcours</a></li>
+                        <li class="uk-active"><a href="#competences">Compétences</a></li>
+                        <li class="uk-active"><a href="#projets">Projets</a></li>
+                    </ul>
+                </div>
+               
+            </div>
+        </header>
+        <div class="main uk-width-1-1">
+            <div id="presentation" class="uk-width-1-1 uk-flex uk-flex-row uk-flex-wrap uk-padding">
+                <div class="uk-width-1-1@s uk-width-2-3@m uk-padding">
+                    <h1>Bonjour !</h1>
+                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero harum, dolorem ipsa ducimus asperiores, esse eius beatae velit quam sit sint veniam excepturi neque hic non officiis! Minima, maxime officiis.</p>
+                </div>
+                <div class="image-presentation uk-width-1-1@s uk-width-1-3@m">
+                    <img src="./img/profile.png" alt="Photo de profile">
+                </div>
+            </div>
+            <div id="parcours" class="uk-width-1-1 uk-padding">
+                <h2 class="uk-padding">Mon parcours</h2>
+                <div class="uk-container uk-flex uk-flex-wrap uk-padding" uk-height-match>
+                    <div class="image-parcours uk-width-1-1 uk-width-1-3@m uk-background uk-background-cover uk-background-center" uk-img data-src="./img/parcours.jpg"></div>
+                    <div class="parcours-text uk-width-1-1 uk-width-2-3@m">
+                        <p>Pendant 5 ans, j’étais électricien en alternance dans le bâtiment. J’ai d’abord passé un CAP Electricien en finissant premier de la promo. Ensuite, j’ai voulu pour-suivre mes études en électricité en faisant un Brevet Professionnel toujours en al-ternance. Durant mon Brevet Professionnel, j’ai participé aux Olympiades des métiers en électricité et je suis arrivé 2ème Grand-Est. Enfin, j’ai décidé de faire une Mention Complémentaire en énergies renouvelables toujours en électricité. Au bout de ces 5 années en alternance, mon contrat, c'est terminé et je me suis retrouvé au chômage. Avec beaucoup de recul, j’ai voulu changer de métier pour devenir militaire ou gendarme. Tout d’abord, j’ai intégré le 61ème régiment d’artillerie de Chaumont en tant que militaire réserviste, pour être sûr de bien sa-voir ce que je voulais. En parallèle, j’ai participé à un concours de gendarme ad-joint volontaire que j’ai réussi. Lors de l’incorporation, j’ai été renvoyé chez moi à cause de mon poids. Suite à ça, je me suis rabattu sur ma passion qui est l’informatique. En janvier 2021, j’ai effectué une initiation de développeur web et web mobile qui m’a plu. Suite à cela, j’ai réalisé une formation de 5 mois no code à la Wild Code School à Lille. Et me voici en formation de Développeur Web et Web Mobile à l’AFCI que je termine actuellement.</p>
+                    </div>
+                </div>
+            </div>
+            <div id="competences" class="uk-width-1-1 uk-padding">
+                <h2 class="uk-padding">Compétences</h2>
+                <div class="uk-container uk-flex uk-flex-wrap uk-padding" uk-grid->
+                    <div class="card-1 uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin">
+                        <label>HTML</label>
+                        <progress class="uk-progress" id="file" max="100" value="90"></progress>
+                    </div>
+                    <div class="card-1 uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin-bottom">
+                        <label>CSS</label>
+                        <progress class="uk-progress" id="file" max="100" value="90"></progress>
+                    </div>
+                    <div class="card-1 uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin">
+                        <label>JavaScript</label>
+                        <progress class="uk-progress" id="file" max="100" value="45"></progress>
+                    </div>
+                    <div class="uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin">
+                        <label>Framework Ulkit</label>
+                        <progress class="uk-progress" id="file" max="100" value="90"></progress>
+                    </div>
+                    <div class="card-1 uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin">
+                        <label>PHP</label>
+                        <progress class="uk-progress" id="file" max="100" value="70"></progress>
+                    </div>
+                </div>
+            </div>
+            <div id="projets" class="uk-width-1-1 uk-padding">
+                <h2 class="uk-padding">Projets</h2>
+                <div class="uk-container">
+                    <div uk-slideshow="animation: fade; autoplay:true; autoplay-interval: 6000;">
+                        <ul class="uk-slideshow-items">
+                            <li >
+                                <a href="localhost/DWWM1_RC/crud" target="_blank">
+                                    <img src="./img/crud.png" alt="">
+                                </a>
+                            </li>
+                            <li>
+                                <a href="">
+                                    <img src="./img/todolist.png" alt="">
+                                </a>
+                            </li>
+                        
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+
+
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/uikit@3.15.1/dist/js/uikit-icons.min.js"></script>
+    </body>
+</html>

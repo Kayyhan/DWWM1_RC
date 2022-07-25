@@ -1,0 +1,69 @@
+body{
+    margin: 0;
+    padding:0;
+    background:#F8F8FF;
+}
+
+header{
+    height: 100px;
+    background:#252426 !important;
+}
+.uk-navbar-container{
+    height: 100px;
+    background:#252426 !important;
+}
+
+.uk-navbar-nav > li.uk-active > a{
+    height: 100%;
+    color:#F8F8FF !important;
+}
+
+
+#presentation{
+}
+
+.image-presentation img{
+    max-width: 80%;
+    border-radius: 50% !important;
+    display:block;
+    margin: 0 auto;
+}
+
+
+#parcours{
+    background:#c3c2c5;
+}
+
+.image-parcours{
+    min-height:332px
+}
+.parcours-text p{
+    width: 95%;
+    margin: 0 auto;
+}
+
+.uk-progress{
+    background-color: #c3c2c5 !important;
+    color:black;
+}
+
+progress::-webkit-progress-value {
+    background-color: #BFA58E !important;
+}
+progress::-moz-progress-bar {
+    background-color: #BFA58E !important;
+}
+progress {
+    background-color: #BFA58E;
+}
+
+progress{
+    width:90% !important;
+}
+
+#projets{
+    /* background:#c3c2c5; */
+}
+.uk-slideshow a{
+    color:black
+}
