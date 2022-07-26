@@ -8,22 +8,41 @@ header{
     height: 100px;
     background:#252426 !important;
 }
+
+.burger-menu{
+    position:absolute;
+    top: 40px;
+    right: 20px;
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
 .uk-navbar-container{
+    position:absolute;
+    top: 0;
+    right: 200px;
     height: 100px;
     background:#252426 !important;
 }
+.uk-navbar-nav > li.uk-active > a:hover{
+    color: #BFA58E !important;
+}
 
 .uk-navbar-nav > li.uk-active > a{
-    height: 100%;
     color:#F8F8FF !important;
+    font-size: 16px !important;
 }
-
-
-#presentation{
+.uk-offcanvas-bar .uk-active > a{
+    color: #F8F8FF !important;
 }
-
+.uk-offcanvas-bar .uk-active > a:hover{
+    color: #BFA58E !important;
+}
+.uk-icon svg rect{
+    color: #f8f8ff;
+}
 .image-presentation img{
-    max-width: 80%;
+    max-width: 50%;
     border-radius: 50% !important;
     display:block;
     margin: 0 auto;
@@ -58,12 +77,13 @@ progress {
 }
 
 progress{
-    width:90% !important;
+    width:85% !important;
 }
 
-#projets{
-    /* background:#c3c2c5; */
+.progress-text{
+    width: 10%;
 }
+
 .uk-slideshow a{
     color:black
 }
@@ -79,4 +99,41 @@ progress{
     background-image: url('../img/parallaxe-2.jpg');
     background-position: center center;
     background-attachment:fixed ;
+}
+
+.uk-card-primary.uk-card-body .uk-slidenav, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-card-secondary.uk-card-body .uk-slidenav, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-light .uk-slidenav, .uk-offcanvas-bar .uk-slidenav, .uk-overlay-primary .uk-slidenav, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav{
+    color: #252426 !important;
+    font-weight: 900;
+}
+
+.form{
+    background: #BFA58E;
+    height:300px;
+    border-radius: 10px;
+}
+.input-container{
+    height: 32px;
+}
+
+.input-container input, .input-container textarea{
+    width: 70%;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border:none;
+    padding: 0 10px;
+    background:#F8F8FF;
+}
+
+.input-container textarea{
+    padding:  10px;
+}
+.input-container button{
+    width: 100px;
+    height: 30px;
+    display: block;
+    border-radius: 10px;
+    border:1px solid #BFA58E;
+    background:#F8F8FF;
 }

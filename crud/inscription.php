@@ -116,7 +116,7 @@
             <p id="taille" class="invalid"><b>8 caractères</b> minimum</p>
         </div>
     </div>
-    <!-- <script>
+    <script>
         var myInput = document.getElementById("password");
         var letter = document.getElementById("lettre");
         var capital = document.getElementById("majuscule");
@@ -175,7 +175,7 @@
                 length.classList.add("invalid");
             }
 
-            var caractereSpecial = /^[!@#$%^&*/]$/g;
+            var caractereSpecial = /[$&+,:;=?@#|'<>.^*()%!-]$/g;
             if (myInput.value.match(caractereSpecial)) {
                 caractere.classList.remove("invalid");
                 caractere.classList.add("valid");
@@ -186,19 +186,19 @@
 
         }
 
-        // function confirm() {
-        //     var mdp = document.getElementById("password").value;
-        //     var mdpConfirm = document.getElementById("password_confirm").value;
+        function confirm() {
+            var mdp = document.getElementById("password").value;
+            var mdpConfirm = document.getElementById("password_confirm").value;
 
-        //     if (mdp != mdpConfirm) {
-        //         console.log("Les mots de passe ne corresponde pas");
-        //         return false;
-        //     } else {
-        //         console.log("Les mots de passe corresponde");
-        //         return false;
-        //     }
-        // }
-    </script> -->
+            if (mdp != mdpConfirm) {
+                console.log("Les mots de passe ne corresponde pas");
+                return false;
+            } else {
+                console.log("Les mots de passe corresponde");
+                return false;
+            }
+        }
+    </script>
 </body>
 
 </html>

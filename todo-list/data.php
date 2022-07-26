@@ -1,7 +1,7 @@
 <?php
 include 'db.connexion.php';
 
-if (count($_GET) == 0) {
+if (empty($_GET)) {
     die("Aucune variable transmise");
 }
 
