@@ -1,5 +1,6 @@
 <?php
 require 'connexion_bd.php';
+session_start();
 $conn = new Connect();
 
 
@@ -43,10 +44,16 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
         return;
     }
 
+
+
+
+
     // $password_crypt = password_hash($password, PASSWORD_BCRYPT);
     $password = hash('sha256', $password);
     $ip = $_SERVER['REMOTE_ADDR'];
-    $query = "INSERT INTO utilisateurs (pseudo, email, password, ip) VALUES ('$pseudo', '$email', '$password', '$ip')";
+    $_SESSION['user'] = uniqid();
+    $session = $_SESSION["user"];
+    $query = "INSERT INTO utilisateurs (pseudo, email, password, ip, SESSION) VALUES ('$pseudo', '$email', '$password', '$ip', '$session')";
     $conn->set($query);
     header('Location:membre.php');
 }
