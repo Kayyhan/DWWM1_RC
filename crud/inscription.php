@@ -124,19 +124,20 @@
         var length = document.getElementById("taille");
         var caractere = document.getElementById("caratere");
 
-        // When the user clicks on the password field, show the message box
+        //Quand je focus l'input, le block s'affiche
         myInput.onfocus = function() {
             document.getElementById("container-condition").style.display = "block";
         }
 
-        // When the user clicks outside of the password field, hide the message box
+        // Quand je sors de l'input, le block ne s'affiche plus
         myInput.onblur = function() {
             document.getElementById("container-condition").style.display = "none";
         }
 
-        // When the user starts to type something inside the password field
+        // Quand l'utilisateur tape dans l'input
         myInput.onkeyup = function() {
-            // Validate lowercase letters
+
+            // Validation de lettre minuscule
             var lowerCaseLetters = /[a-z]/g;
             if (myInput.value.match(lowerCaseLetters)) {
                 letter.classList.remove("invalid");
@@ -146,7 +147,7 @@
                 letter.classList.add("invalid");
             }
 
-            // Validate capital letters
+            // Validation de lettre majuscule
             var upperCaseLetters = /[A-Z]/g;
             if (myInput.value.match(upperCaseLetters)) {
                 capital.classList.remove("invalid");
@@ -156,7 +157,7 @@
                 capital.classList.add("invalid");
             }
 
-            // Validate numbers
+            // Validation d'un chiffre
             var numbers = /[0-9]/g;
             if (myInput.value.match(numbers)) {
                 number.classList.remove("invalid");
@@ -166,7 +167,7 @@
                 number.classList.add("invalid");
             }
 
-            // Validate length
+            // Validation de 8 caractères minimum
             if (myInput.value.length >= 8) {
                 length.classList.remove("invalid");
                 length.classList.add("valid");
@@ -175,6 +176,7 @@
                 length.classList.add("invalid");
             }
 
+            // Validation d'un caractère spécial
             var caractereSpecial = /[$&+,:;=?@#|'<>.^*()%!-]$/g;
             if (myInput.value.match(caractereSpecial)) {
                 caractere.classList.remove("invalid");
@@ -186,6 +188,7 @@
 
         }
 
+        // Fonction pur voir si l'input password_confirm est identique au password
         function confirm() {
             var mdp = document.getElementById("password").value;
             var mdpConfirm = document.getElementById("password_confirm").value;

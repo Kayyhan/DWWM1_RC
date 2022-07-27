@@ -1,9 +1,6 @@
 <?php
 require 'connexion_bd.php';
-
 $conn = new Connect();
-
-
 
 
 if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password']) && isset($_POST['password_confirm'])) {
@@ -46,9 +43,10 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
         return;
     }
 
-    $password_crypt = password_hash($password, PASSWORD_BCRYPT);
+    // $password_crypt = password_hash($password, PASSWORD_BCRYPT);
+    $password = hash('sha256', $password);
     $ip = $_SERVER['REMOTE_ADDR'];
     $query = "INSERT INTO utilisateurs (pseudo, email, password, ip) VALUES ('$pseudo', '$email', '$password', '$ip')";
     $conn->set($query);
-    header('Location:inscription.php?reg_err=success');
+    header('Location:membre.php');
 }
