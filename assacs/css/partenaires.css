@@ -1,0 +1,41 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+@media only screen and (max-width : 600px){
+	.row h3{
+		text-align:center;
+	}
+	.row img{
+		display:block;
+		margin:auto;
+	}
+}
+@media only screen and (max-width : 992px){
+	
+}
+body{
+	background:url(../img/pattern8.png);
+}
+.brand-logo img {
+	width:200px;
+	height:auto;
+}
+footer input {
+    color:white;
+}
+article{
+	margin-top:150px;
+}
+article h1{
+	text-align:center;
+	margin-bottom:100px;
+}
+.row{
+	border:2px solid black;
+}
+.row img{
+	margin-top:5px;
+}

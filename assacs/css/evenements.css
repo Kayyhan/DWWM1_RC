@@ -1,0 +1,44 @@
+.icon-block {
+  padding: 0 15px;
+}
+.icon-block .material-icons {
+	font-size: inherit;
+}
+@media only screen and (max-width : 600px){
+
+
+}
+@media only screen and (max-width : 992px){
+	
+}
+body{
+	background:url(../img/pattern8.png);
+}
+.brand-logo img {
+	width:200px;
+	height:auto;
+}
+footer input {
+    color:white;
+}
+article{
+	margin-top:150px;
+}
+article h1{
+	text-align:center;
+	margin-bottom:100px;
+}
+article h3{
+	margin-bottom:20px;
+	font-weight:500;
+}
+.row{
+	margin-bottom:50px;
+}
+article .row p{
+	margin-bottom:30px;
+	font-size:16pt;
+}
+#bal p{
+	margin-bottom:-15px;
+}
