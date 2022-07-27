@@ -13,12 +13,13 @@
     <link rel="stylesheet" href="./css/styles.css" type="text/css">
 </head>
     <body>
-        
-        <!-- Navigation -->
+                
         <header class="uk-width-1-1">
-            <div class="uk-width-1-3">
+            <div class="uk-width-2-3 logo">
                 <img src="./img/logo.png" alt="Logo">
             </div>
+
+            <!-- Navigation desktop-->
             <div class="uk-navbar-container uk-width-1-3 uk-visible@l uk-text-right" uk-navbar>
                 <div class="uk-navbar-right uk-width-1-1">
                         <ul class="uk-navbar-nav uk-width-1-1 uk-flex uk-flex-around">
@@ -26,14 +27,15 @@
                         <li class="uk-active"><a href="#parcours">Parcours</a></li>
                         <li class="uk-active"><a href="#competences">Compétences</a></li>
                         <li class="uk-active"><a href="#projets">Projets</a></li>
+                        <li class="uk-active"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
 
+            <!-- Navigation mobile-->
             <div class="burger-menu uk-hidden@l">
                 <span  uk-toggle="target: #offcanvas-nav" uk-icon="icon: menu; ratio: 2"></span>
             </div>
-            <!-- <button class="uk-hidden@l" type="button" uk-toggle="target: #offcanvas-nav">Default Nav</button> -->
             <div id="offcanvas-nav" uk-offcanvas="overlay: true; flip:true">
                 <div class="uk-offcanvas-bar">
                     <ul class="uk-nav uk-nav-default">
@@ -41,6 +43,7 @@
                         <li class="uk-active"><a href="#parcours">Parcours</a></li>
                         <li class="uk-active"><a href="#competences">Compétences</a></li>
                         <li class="uk-active"><a href="#projets">Projets</a></li>
+                        <li class="uk-active"><a href="#contact">Contact</a></li>
                     </ul>
                 </div>
             </div>
@@ -52,12 +55,11 @@
 
 
             <!-- Présentation -->
-
             <div id="presentation" class="uk-width-1-1 uk-flex uk-flex-row uk-flex-wrap uk-padding-large">
-                <div class="uk-width-1-1@s uk-width-2-3@m uk-padding">
-                    <h1>Rémy Cuvillier</h1>
-                    <h2>Développeur web</h2>
-                    <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Vero harum, dolorem ipsa ducimus asperiores, esse eius beatae velit quam sit sint veniam excepturi neque hic non officiis! Minima, maxime officiis.</p>
+                <div class="uk-width-1-1 uk-width-2-3@m">
+                    <h1 class="uk-text-center">Bonjour !</h1>
+                    <h2 class="uk-text-center uk-margin-remove">Et bienvenue</h2>
+                    <p class=" uk-width-1-1 uk-width-2-3@m uk-margin-auto uk-text-center">Je m'appelle Rémy, j'ai 23 ans. Jeune passionné de l'informatique, je me suis lancé dans le développement web et web mobile. J'ai comme hobbies le basket-ball, la musculation et les sports automobiles.</p>
                 </div>
                 <div class="image-presentation uk-width-1-1@s uk-width-1-3@m">
                     <img src="./img/profile.png" alt="Photo de profile">
@@ -68,8 +70,8 @@
             <div class="parallaxe-1 uk-width-1-1"></div>
 
             <!-- Mon parcours  -->
-            <div id="parcours" class="uk-width-1-1 uk-padding">
-                <h2 class="uk-padding">Mon parcours</h2>
+            <div id="parcours" class="uk-width-1-1">
+                <h2 class="uk-padding uk-text-center">Mon parcours</h2>
                 <div class="uk-container uk-flex uk-flex-wrap uk-padding" uk-height-match>
                     <div class="image-parcours uk-width-1-1 uk-width-1-3@m uk-background uk-background-cover uk-background-center" uk-img data-src="./img/parcours.jpg"></div>
                     <div class="parcours-text uk-width-1-1 uk-width-2-3@m">
@@ -85,7 +87,7 @@
 
             <!-- Mes compétences -->
             <div id="competences" class="uk-width-1-1 uk-padding">
-                <h2 class="uk-padding">Compétences</h2>
+                <h2 class="uk-padding uk-text-center">Compétences</h2>
                 <div class="uk-container uk-flex uk-flex-wrap uk-padding" uk-grid->
                     <div class="card-1 uk-width-1-1 uk-width-1-2@m uk-flex uk-flex-column uk-margin">
                         <label>HTML</label>
@@ -132,7 +134,7 @@
 
             <!-- Mes projets -->
             <div id="projets" class="uk-width-1-1 uk-padding">
-                <h2 class="uk-padding">Projets</h2>
+                <h2 class="uk-padding uk-text-center">Projets</h2>
                 <div class="uk-container">
                     <div uk-slideshow="animation: fade; autoplay:true; autoplay-interval: 6000;ratio: 17:9">
                         <div class="uk-position-relative uk-visible-toggle uk-light" tabindex="-1">
@@ -156,33 +158,37 @@
                     </div>
                 </div>
             </div>
+
+
+
+            <!-- Parallaxe -->
+            <div class="parallaxe-2 uk-width-1-1"></div>
+
+
+
+
+            <!-- Formulaire de contact -->
+            <div class="uk-width-1-1 uk-container uk-padding form-container " id="contact">
+                <h2 class="uk-padding uk-text-center">Contact</h2>
+                <form class="uk-width-1-2 uk-width-2-4@m uk-margin-auto  uk-padding  form" action="" method="get" class="form" id="form" >
+                    <div class="input-container uk-width-1-1">
+                        <input type="text" id="name" name="name" placeholder="Nom" required>
+                    </div>
+                    <div class="input-container uk-width-1-1">
+                        <input type="email" id="email" name="email" placeholder="Email" required>
+                    </div>
+                    <div class="input-container uk-width-1-1">
+                        <input type="text" id="objet" name="objet" placeholder="Objet" required>
+                    </div>
+                    <div class="textarea-container uk-width-1-1">
+                        <textarea id="message" name="message" placeholder="Message" required></textarea>
+                    </div>
+                    <div class="button-container uk-width-1-1">
+                        <button class="button">Envoyer</button>
+                    </div>
+                </form>
+            </div>
         </div>
-
-        <!-- Parallaxe -->
-        <div class="parallaxe-2 uk-width-1-1"></div>
-
-        <!-- Formulaire de contact -->
-        <div class="form-container uk-width-1-1 uk-container uk-padding">
-            <h2 class="uk-padding">Me contacter</h2>
-            <form class="uk-width-1-2 uk-width-2-4@m uk-margin-auto  uk-padding uk-flex uk-flex-column uk-flex-around form" action="" method="get" class="form" id="form" >
-            <div class="input-container uk-width-1-1">
-                <input type="text" id="name" name="name" placeholder="Nom" required>
-            </div>
-            <div class="input-container uk-width-1-1">
-                <input type="email" id="email" name="email" placeholder="Email" required>
-            </div>
-            <div class="input-container uk-width-1-1">
-                <input type="text" id="objet" name="objet" placeholder="Objet" required>
-            </div>
-            <div class="input-container uk-width-1-1">
-                <textarea id="message" name="message" placeholder="Message" required></textarea>
-            </div>
-            <div class="input-container uk-width-1-1">
-                <button class="button">Envoyer</button>
-            </div>
-        </form>
-        </div>
-
 
 
         <!-- Script Ulkit -->

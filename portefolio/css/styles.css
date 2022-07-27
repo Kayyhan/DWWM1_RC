@@ -1,14 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@300;400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Slab:wght@100;200;300;400;500;600;700;800;900&display=swap');
+html{
+    font-size: 1.1rem;
+}
 body{
     margin: 0;
     padding:0;
     background:#F8F8FF;
 }
+.main h1, .main h2{
+    font-family: 'Kalam', cursive;
+}
+.main p, .main label{
+    font-family: 'Roboto Slab', serif;
+    
+    color: #252426;
+}
+
+
 
 header{
     height: 100px;
     background:#252426 !important;
 }
 
+/* navigation mobile */
 .burger-menu{
     position:absolute;
     top: 40px;
@@ -17,6 +33,14 @@ header{
     height: 25px;
     cursor: pointer;
 }
+.uk-offcanvas-bar .uk-active > a:hover{
+    color: #BFA58E !important;
+}
+.uk-icon svg rect{
+    color: #f8f8ff;
+}
+
+/* Navigation desktop */
 .uk-navbar-container{
     position:absolute;
     top: 0;
@@ -34,12 +58,19 @@ header{
 }
 .uk-offcanvas-bar .uk-active > a{
     color: #F8F8FF !important;
+    font-size:18px;
 }
-.uk-offcanvas-bar .uk-active > a:hover{
-    color: #BFA58E !important;
+
+.logo{
+    height: 100px;
 }
-.uk-icon svg rect{
-    color: #f8f8ff;
+
+/* Présentation */
+#presentation{
+    padding-top: 150px;
+}
+#presentation > .uk-width-1-1 > h2{
+    padding-left: 40px;
 }
 .image-presentation img{
     max-width: 50%;
@@ -48,7 +79,7 @@ header{
     margin: 0 auto;
 }
 
-
+/* Mon parcours */
 #parcours{
     background:#c3c2c5;
 }
@@ -61,16 +92,15 @@ header{
     margin: 0 auto;
 }
 
+
+
+/* Mes compétences */
 .uk-progress{
     background-color: #c3c2c5 !important;
     color:black;
 }
-
-progress::-webkit-progress-value {
-    background-color: #BFA58E !important;
-}
-progress::-moz-progress-bar {
-    background-color: #BFA58E !important;
+.progress-text{
+    width: 10%;
 }
 progress {
     background-color: #BFA58E;
@@ -80,13 +110,100 @@ progress{
     width:85% !important;
 }
 
-.progress-text{
-    width: 10%;
+progress::-webkit-progress-value {
+    background-color: #BFA58E !important;
+}
+progress::-moz-progress-bar {
+    background-color: #BFA58E !important;
 }
 
+
+/* Mes projets */
 .uk-slideshow a{
     color:black
 }
+.uk-card-primary.uk-card-body .uk-slidenav, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-card-secondary.uk-card-body .uk-slidenav, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-light .uk-slidenav, .uk-offcanvas-bar .uk-slidenav, .uk-overlay-primary .uk-slidenav, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav{
+    color: #252426 !important;
+    font-weight: 900;
+}
+
+
+/* Conctact */
+.form{
+    background: #BFA58E;
+    height:auto;
+    border-radius: 10px;
+}
+.input-container{
+    width: 90%;
+    margin: 0px auto 30px auto;
+    height: 32px;
+}
+.input-container input{
+    width: 100%;
+    height: 30px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border:none;
+    padding: 0 10px;
+    background:#F8F8FF;
+    color: #252426;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.textarea-container{
+    width: 90%;
+    margin: 0px auto 30px auto;
+    height: auto;
+}
+
+.textarea-container textarea{
+    width: 100%;
+    height: 50px;
+    display: block;
+    margin: 0 auto;
+    border-radius: 10px;
+    border:none;
+    padding: 10px;
+    color: #252426;
+    background:#F8F8FF;
+    font-family: 'Roboto Slab', serif;
+}
+.button-container{
+    width: 100%;
+    margin: 0px auto 0px auto;
+    height: 30px;
+}
+.button-container button{
+    width: 100px;
+    height: 30px;
+    margin: 0 auto;
+    display: block;
+    border-radius: 10px;
+    border:1px solid #F8F8FF;
+    background:#F8F8FF;
+    cursor: pointer;
+    color: #252426;
+    text-transform: uppercase;
+    font-weight: 500;
+    font-family: 'Roboto Slab', serif;
+    
+}
+.button-container button:hover{
+    background: #252426;
+    color: #F8F8FF;
+}
+.input-container input:focus, .textarea-container textarea:focus{
+    outline: none;
+}
+.input-container input::placeholder, .textarea-container textarea::placeholder{
+    color: #252426;
+    font-family: 'Roboto Slab', serif;
+}
+
+
+
 
 .parallaxe-1{
     height:400px;
@@ -99,41 +216,4 @@ progress{
     background-image: url('../img/parallaxe-2.jpg');
     background-position: center center;
     background-attachment:fixed ;
-}
-
-.uk-card-primary.uk-card-body .uk-slidenav, .uk-card-primary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-card-secondary.uk-card-body .uk-slidenav, .uk-card-secondary > :not([class*="uk-card-media"]) .uk-slidenav, .uk-light .uk-slidenav, .uk-offcanvas-bar .uk-slidenav, .uk-overlay-primary .uk-slidenav, .uk-section-primary:not(.uk-preserve-color) .uk-slidenav, .uk-section-secondary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-primary:not(.uk-preserve-color) .uk-slidenav, .uk-tile-secondary:not(.uk-preserve-color) .uk-slidenav{
-    color: #252426 !important;
-    font-weight: 900;
-}
-
-.form{
-    background: #BFA58E;
-    height:300px;
-    border-radius: 10px;
-}
-.input-container{
-    height: 32px;
-}
-
-.input-container input, .input-container textarea{
-    width: 70%;
-    height: 30px;
-    display: block;
-    margin: 0 auto;
-    border-radius: 10px;
-    border:none;
-    padding: 0 10px;
-    background:#F8F8FF;
-}
-
-.input-container textarea{
-    padding:  10px;
-}
-.input-container button{
-    width: 100px;
-    height: 30px;
-    display: block;
-    border-radius: 10px;
-    border:1px solid #BFA58E;
-    background:#F8F8FF;
 }
