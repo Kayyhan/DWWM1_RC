@@ -15,7 +15,7 @@ class Connect
     {
         $stmt = $this->conn->prepare($query);
         $stmt->execute();
-        return $stmt->fetchAll();
+        return $stmt->fetchAll()[0];
     }
 
     function set($query)

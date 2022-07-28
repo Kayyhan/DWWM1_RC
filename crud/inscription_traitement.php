@@ -14,8 +14,6 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
     $query = "SELECT id FROM utilisateurs WHERE email = '$email' OR pseudo = '$pseudo'";
     $row = $conn->get($query);
 
-    var_dump(empty($row));
-
 
     if (!empty($row)) {
         // si utilisateur existe deja erreur
@@ -46,10 +44,7 @@ if (isset($_POST['pseudo']) && isset($_POST['email']) && isset($_POST['password'
 
 
 
-
-
-    // $password_crypt = password_hash($password, PASSWORD_BCRYPT);
-    $password = hash('sha256', $password);
+    $password = password_hash($password, PASSWORD_BCRYPT);
     $ip = $_SERVER['REMOTE_ADDR'];
     $_SESSION['user'] = uniqid();
     $session = $_SESSION["user"];

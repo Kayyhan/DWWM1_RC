@@ -62,18 +62,17 @@
         ?>
 
         <h1>Connexion :</h1>
-        <form method="post" action="connexion_traitement.php" id="form-connexion" class="form-connexion">
+        <form action="connexion_traitement.php" method="POST" id="form-connexion" class="form-connexion">
             <div class="connexion-pseudo">
-                <input type="email" class="email" id="email" placeholder="Email" required />
+                <input type="email" name="email" class="email" id="email" placeholder="Email" required />
             </div>
             <div class="connexion-mdp">
-                <input type="password" class="password_connexion" id="password_connexion" placeholder="Mot de passe" required />
+                <input type="password" name="password" class="password_connexion" id="password_connexion" placeholder="Mot de passe" required />
             </div>
             <div class="button-connexion">
                 <button type="submit" id="submit_connexion">Connexion</button>
             </div>
             <div class="information">
-                <a href="#" class="mdp-oublie">Mot de passe oublié ?</a>
                 <a href="/DWWM1_RC/crud/inscription.php" class="no-compte">Pas encore de compte ?</a>
             </div>
         </form>
